@@ -657,6 +657,12 @@ section {
     flex-direction: column;
     gap: 14px;
   }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 18px;
+    row-gap: 10px;
+  }
   .hero h1 {
     font-size: 38px;
   }
