@@ -15,6 +15,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mobile Hamburger Menu Toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburgerBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = hamburgerBtn.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+            icon.className = 'fa-solid fa-xmark';
+        } else {
+            icon.className = 'fa-solid fa-bars';
+        }
+    });
+
+    // Close mobile menu when clicking any nav item
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = hamburgerBtn.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-bars';
+        });
+    });
+
     // Hero Section Typing Effect
     const textToType = "Architecting High-Performance Digital Solutions";
     const typedTextElement = document.getElementById('typedText');
