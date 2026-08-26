@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Virexo Business Website Expansion</title>
+    <title>Virexo – Business Website Expansion</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -36,7 +36,7 @@
             </a>
 
             <div class="nav-center-group">
-                <nav class="nav-links">
+                <nav class="nav-links" id="navLinks">
                     <a href="#hero" class="nav-item">Home</a>
                     <a href="#about" class="nav-item">About</a>
                     <a href="#services" class="nav-item">Services</a>
@@ -47,9 +47,14 @@
                 </nav>
             </div>
 
-            <button id="themeToggleBtn" class="theme-toggle" aria-label="Toggle Theme">
-                <i class="fa-solid fa-moon"></i>
-            </button>
+            <div class="nav-actions">
+                <button id="themeToggleBtn" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -112,7 +117,7 @@
         </div>
     </section>
 
-    <!-- Specialized Services Section with Added Tech Badges Below Cards -->
+    <!-- Specialized Services Section -->
     <section id="services" class="services-section">
         <div class="container">
             <div class="section-title">
@@ -121,7 +126,6 @@
             </div>
             
             <div class="services-grid">
-                <!-- 1. Web Development -->
                 <div class="service-card interactive-card">
                     <div class="icon-wrap"><i class="fa-solid fa-code"></i></div>
                     <h3>Web Development</h3>
@@ -134,7 +138,6 @@
                     </div>
                 </div>
 
-                <!-- 2. AI & Machine Learning -->
                 <div class="service-card interactive-card">
                     <div class="icon-wrap"><i class="fa-solid fa-brain"></i></div>
                     <h3>AI & Machine Learning</h3>
@@ -147,7 +150,6 @@
                     </div>
                 </div>
 
-                <!-- 3. Python Solutions -->
                 <div class="service-card interactive-card">
                     <div class="icon-wrap"><i class="fa-brands fa-python"></i></div>
                     <h3>Python Solutions</h3>
@@ -160,7 +162,6 @@
                     </div>
                 </div>
 
-                <!-- 4. Mobile Engineering -->
                 <div class="service-card interactive-card">
                     <div class="icon-wrap"><i class="fa-solid fa-mobile-screen-button"></i></div>
                     <h3>Mobile Engineering</h3>
@@ -176,7 +177,7 @@
         </div>
     </section>
 
-    <!-- Interactive Strategy Section with Proper Arrow Head & Flow Animation -->
+    <!-- Strategy Section -->
     <section id="strategy" class="strategy-section">
         <div class="container">
             <div class="section-title">
@@ -199,13 +200,11 @@
                                 <stop offset="100%" stop-color="#10b981" />
                             </linearGradient>
                             
-                            <!-- Arrowhead Definition -->
                             <marker id="graphArrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
                                 <polygon points="0 0, 8 4, 0 8" fill="#10b981" />
                             </marker>
                         </defs>
 
-                        <!-- Animated Path Ending with Arrowhead -->
                         <path d="M 30 150 L 160 110 L 290 135 L 440 75 L 580 95 L 750 30" 
                               fill="none" 
                               stroke="url(#lineGrad)" 
@@ -215,7 +214,6 @@
                               class="animated-graph-path"/>
                     </svg>
 
-                    <!-- Sequentially Animated Strategy Nodes -->
                     <div class="graph-nodes">
                         <div class="node node-1" style="left: 3.75%; top: 75%;">
                             <span class="node-dot"></span>
