@@ -49,14 +49,14 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(27, 18, 32, 0.92);
+    background: rgba(27, 18, 32, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
 }
 
 body.light-mode .navbar {
-    background: rgba(248, 246, 252, 0.92);
+    background: rgba(248, 246, 252, 0.95);
 }
 
 .nav-container {
@@ -66,7 +66,6 @@ body.light-mode .navbar {
     max-width: 1250px;
     margin: 0 auto;
     padding: 14px 20px;
-    position: relative;
 }
 
 .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -74,7 +73,7 @@ body.light-mode .navbar {
 .brand-name { font-size: 1.35rem; font-weight: 700; color: var(--text-main); display: block; }
 .brand-tagline { font-size: 0.65rem; color: var(--accent-purple); font-weight: 500; }
 
-.nav-center-group { display: flex; align-items: center; margin-right: 60px; }
+.nav-center-group { display: flex; align-items: center; }
 .nav-links { display: flex; align-items: center; gap: 22px; }
 
 .nav-links .nav-item {
@@ -100,11 +99,9 @@ body.light-mode .navbar {
 .nav-links .nav-item:hover { color: var(--text-main); }
 .nav-links .nav-item:hover::after { width: 100%; }
 
-.theme-toggle {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+
+.theme-toggle, .hamburger-btn {
     background: var(--bg-card);
     border: 1px solid var(--border-highlight);
     color: var(--accent-purple);
@@ -115,9 +112,11 @@ body.light-mode .navbar {
     transition: all 0.3s ease;
 }
 
-.theme-toggle:hover { box-shadow: 0 0 12px var(--accent-purple); }
+.hamburger-btn { display: none; }
 
-/* Animated Hero Buttons */
+.theme-toggle:hover, .hamburger-btn:hover { box-shadow: 0 0 12px var(--accent-purple); }
+
+/* Buttons */
 .btn-animated-primary {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
     color: #fff;
@@ -206,7 +205,7 @@ body.light-mode .navbar {
     50% { transform: translateY(-12px); }
 }
 
-/* Specialized Services Tech Badges Styling */
+/* Tech Badges */
 .tech-badge-container {
     margin-top: 18px;
     display: flex;
@@ -454,9 +453,29 @@ footer.footer-section {
 }
 .author-credit { margin-top: 5px; color: var(--accent-purple); }
 
+/* Mobile Responsive Styles */
 @media (max-width: 850px) {
+    .hamburger-btn { display: block; }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-highlight);
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
     .hero-container, .stats-grid, .footer-grid, .form-group-row { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
     .process-flow { flex-direction: column; }
     .process-arrow { transform: rotate(90deg); animation: none; }
 }
