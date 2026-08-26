@@ -1,220 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Virexo Digital Business Website - Homepage</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Virexo Business Website Expansion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="dark-mode">
 
-  <div class="glow-bg bg-glow-1"></div>
-  <div class="glow-bg bg-glow-2"></div>
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo">
+                <div class="logo-icon-wrapper">
+                    <svg viewBox="0 0 100 100" class="virexo-svg-logo">
+                        <defs>
+                            <linearGradient id="vGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#1d4ed8"/>
+                                <stop offset="40%" stop-color="#c15fd6"/>
+                                <stop offset="100%" stop-color="#10b981"/>
+                            </linearGradient>
+                            <marker id="logoArrow" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto">
+                                <polygon points="0 0, 6 3, 0 6" fill="#10b981" />
+                            </marker>
+                        </defs>
+                        <path d="M 18 22 L 48 82 C 50 86 54 86 56 82 L 82 18" fill="none" stroke="url(#vGrad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 52 74 L 84 14" fill="none" stroke="#10b981" stroke-width="6" stroke-linecap="round" marker-end="url(#logoArrow)"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Virexo Innovations</span>
+                    <span class="brand-tagline">Where Innovation Meets Excellence</span>
+                </div>
+            </a>
 
-  <header class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="logo">Virexo</a>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#process">Process</a>
-        <a href="#services">Services</a>
-        <a href="#faq">FAQ</a>
-        <a href="#careers">Careers</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+            <div class="nav-center-group">
+                <nav class="nav-links">
+                    <a href="#hero" class="nav-item">Home</a>
+                    <a href="#about" class="nav-item">About</a>
+                    <a href="#services" class="nav-item">Services</a>
+                    <a href="#strategy" class="nav-item">Strategy</a>
+                    <a href="#process" class="nav-item">Process</a>
+                    <a href="#reviews" class="nav-item">Reviews</a>
+                    <a href="#contact" class="btn-primary-sm">Contact Us</a>
+                </nav>
+            </div>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> Innovating The Future</span>
-      <h1>Welcome to <span class="gradient-text">Virexo</span></h1>
-      <p>Where Innovation Meets Excellence. We build high-performance web applications, custom software, and scalable AI solutions tailored for modern enterprises.</p>
-      <div class="hero-btns">
-        <a href="#services" class="btn btn-primary">Explore Services</a>
-        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="stats" id="stats">
-    <div class="stat-item animated-card">
-      <div class="stat-header">
-        <span class="stat-num" data-target="200">0</span><span class="stat-plus">+</span>
-      </div>
-      <p>Projects Completed</p>
-    </div>
-    <div class="stat-item animated-card">
-      <div class="stat-header">
-        <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
-      </div>
-      <p>Happy Clients</p>
-    </div>
-    <div class="stat-item animated-card">
-      <div class="stat-header">
-        <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
-      </div>
-      <p>Years Experience</p>
-    </div>
-    <div class="stat-item animated-card">
-      <div class="stat-header">
-        <span class="stat-num" data-target="24">0</span><span class="stat-plus">/7</span>
-      </div>
-      <p>Support Available</p>
-    </div>
-  </section>
-
-  <section class="about reveal" id="about">
-    <div class="about-card animated-card">
-      <span class="section-tag">Who We Are</span>
-      <h2>About Us</h2>
-      <p>At Virexo, we believe digital solutions should empower businesses with precision, speed, and intelligence. We design scalable web applications, cross-platform mobile products, and AI-driven workflows tailored directly to client goals. Driven by technical excellence and user-centered design, our team converts complex software challenges into impactful digital products.</p>
-    </div>
-  </section>
-
-  <section class="process reveal" id="process">
-    <span class="section-tag">How We Work</span>
-    <h2>Our Execution Process</h2>
-    <div class="process-grid">
-      <div class="process-card animated-card reveal delay-1">
-        <div class="process-num">01</div>
-        <h3>Discovery & Strategy</h3>
-        <p>We analyze your business architecture, market opportunities, and specific technical goals to design a clear project blueprint.</p>
-      </div>
-      <div class="process-card animated-card reveal delay-2">
-        <div class="process-num">02</div>
-        <h3>UI/UX & Architecture</h3>
-        <p>Crafting intuitive interfaces and robust backend structures focused on functionality, security, and scalability.</p>
-      </div>
-      <div class="process-card animated-card reveal delay-3">
-        <div class="process-num">03</div>
-        <h3>Development & QA</h3>
-        <p>Clean, maintainable code backed by rigorous automated and manual testing before any release goes live.</p>
-      </div>
-      <div class="process-card animated-card reveal delay-4">
-        <div class="process-num">04</div>
-        <h3>Deployment & Support</h3>
-        <p>Seamless production launch paired with continuous optimization, monitoring, and dedicated operational support.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="services reveal" id="services">
-    <span class="section-tag">What We Offer</span>
-    <h2>Core Services</h2>
-    <div class="services-grid">
-      <div class="service-card animated-card reveal delay-1">
-        <div class="icon"><i class="fa-solid fa-code"></i></div>
-        <h3>Web Development</h3>
-        <p>High-performance, secure, and responsive web systems built with modern frameworks and clean architecture.</p>
-      </div>
-      <div class="service-card animated-card reveal delay-2">
-        <div class="icon"><i class="fa-solid fa-brain"></i></div>
-        <h3>AI & ML Solutions</h3>
-        <p>Custom machine learning algorithms, natural language processing, automated data pipelines, and smart tools.</p>
-      </div>
-      <div class="service-card animated-card reveal delay-3">
-        <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-        <h3>App Development</h3>
-        <p>Native and cross-platform mobile solutions offering frictionless performance across iOS and Android platforms.</p>
-      </div>
-      <div class="service-card animated-card reveal delay-4">
-        <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>Digital Growth & Strategy</h3>
-        <p>Data-informed marketing strategies, technical SEO, and brand positioning aimed at measurable business metrics.</p>
-      </div>
-    </div>
-
-    <div class="tech-stack">
-      <span class="tech-pill"><i class="fa-brands fa-react"></i> React</span>
-      <span class="tech-pill"><i class="fa-brands fa-flutter"></i> Flutter</span>
-      <span class="tech-pill"><i class="fa-brands fa-python"></i> Python</span>
-      <span class="tech-pill"><i class="fa-solid fa-database"></i> Supabase</span>
-      <span class="tech-pill"><i class="fa-brands fa-node-js"></i> Node.js</span>
-    </div>
-  </section>
-
-  <section class="faq reveal" id="faq">
-    <span class="section-tag">Got Questions?</span>
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-container">
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>What services does Virexo specialize in?</span>
-          <i class="fa-solid fa-chevron-down faq-icon"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Virexo provides end-to-end digital services including custom web development, mobile applications (Flutter/iOS/Android), AI & ML integration, and growth strategy.</p>
+            <button id="themeToggleBtn" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>How can candidates apply for internships?</span>
-          <i class="fa-solid fa-chevron-down faq-icon"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Simply click the "Apply For Internship" button in our Careers section or email us directly with your CV and portfolio. Every application is personally reviewed by our lead developers.</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge"><i class="fa-solid fa-sparkles"></i> Enterprise Tech Solution</span>
+                <h1 class="typing-container"><span id="typedText"></span><span class="cursor">&nbsp;</span></h1>
+                <p>Virexo Innovations engineers high-scalability web systems, intelligent AI automation pipelines, and custom software architectures for modern businesses worldwide.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn-animated-primary">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn-animated-secondary">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-image-frame animated-float">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Software Engineering Teamwork" class="clean-hero-img">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>What is the typical turnaround time for a project?</span>
-          <i class="fa-solid fa-chevron-down faq-icon"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Project timelines depend on complexity. Small business websites usually take 1–2 weeks, while full custom software/AI solutions range from 4 to 8 weeks.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Virexo Innovations</h2>
+                <p>Driving digital transformation through technical precision and aesthetic UX excellence.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card interactive-card">
+                    <h3 class="counter-number" data-target="200">0</h3><span class="plus-sign">+</span>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-card interactive-card">
+                    <h3 class="counter-number" data-target="150">0</h3><span class="plus-sign">+</span>
+                    <p>Global Clients</p>
+                </div>
+                <div class="stat-card interactive-card">
+                    <h3 class="counter-number" data-target="99">0</h3><span class="plus-sign">%</span>
+                    <p>Satisfaction Rate</p>
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-box interactive-card">
+                    <div class="box-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>Our Enterprise Mission</h3>
+                    <p>We craft robust software platforms, custom web systems, and mobile applications tailored to help organizations automate workflows and scale exponentially.</p>
+                </div>
+                <div class="about-box interactive-card">
+                    <div class="box-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Core Engineering Values</h3>
+                    <p>Clean code, scalable APIs, uncompromising security standards, and user-first UX design form the foundation of everything we build.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="careers reveal" id="careers">
-    <div class="careers-card animated-card">
-      <span class="section-tag">Join Our Team</span>
-      <h2>Careers & Internships</h2>
-      <p>We actively invest in upcoming tech talent. Virexo offers structured hands-on internships across software engineering, AI/ML research, mobile app development, and digital design. Every single application is directly evaluated by our technical leadership guarantees fast responses without automated rejections.</p>
-      <a href="mailto:virexoinnovations@gmail.com?subject=Internship Application - Virexo" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Apply For Internship</a>
-    </div>
-  </section>
+    <!-- Specialized Services Section with Added Tech Badges Below Cards -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Specialized Services</h2>
+                <p>End-to-end digital capabilities designed for enterprise growth.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- 1. Web Development -->
+                <div class="service-card interactive-card">
+                    <div class="icon-wrap"><i class="fa-solid fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Dynamic, responsive web applications built with modern frameworks and state management.</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-badge"><i class="fa-brands fa-react"></i> React</span>
+                        <span class="tech-badge"><i class="fa-solid fa-wind"></i> Tailwind</span>
+                        <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML5/CSS3</span>
+                    </div>
+                </div>
 
-  <section class="contact reveal" id="contact">
-    <span class="section-tag">Let's Connect</span>
-    <h2>Get In Touch</h2>
-    <p>Have a project in mind or need technical assistance? Our engineering team is ready to assist you.</p>
-    <a href="mailto:virexoinnovations@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Us Directly</a>
-  </section>
+                <!-- 2. AI & Machine Learning -->
+                <div class="service-card interactive-card">
+                    <div class="icon-wrap"><i class="fa-solid fa-brain"></i></div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Predictive ML models, data pipelines, and intelligent classification automation.</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="tech-badge"><i class="fa-solid fa-microchip"></i> TensorFlow</span>
+                        <span class="tech-badge"><i class="fa-solid fa-fire"></i> PyTorch</span>
+                        <span class="tech-badge"><i class="fa-solid fa-robot"></i> Scikit-Learn</span>
+                    </div>
+                </div>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <h3>Virexo</h3>
-        <p>A digital business building thoughtful websites, apps, and AI-driven tools for growing brands worldwide.</p>
-      </div>
-      <div class="footer-contact">
-        <h4>Contact Info</h4>
-        <p><i class="fa-solid fa-envelope"></i> virexoinnovations@gmail.com</p>
-        <p><i class="fa-solid fa-phone"></i> +92 302 7199916</p>
-        <p><i class="fa-solid fa-globe"></i> <a href="https://virexo.odoo.com" target="_blank">virexo.odoo.com</a></p>
-      </div>
-      <div class="footer-social">
-        <h4>Follow & Connect</h4>
-        <div class="social-links">
-          <a href="https://virexo.odoo.com" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Website</a>
-          <a href="https://x.com/virexo" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> Follow on X</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                <!-- 3. Python Solutions -->
+                <div class="service-card interactive-card">
+                    <div class="icon-wrap"><i class="fa-brands fa-python"></i></div>
+                    <h3>Python Solutions</h3>
+                    <p>High-speed REST API development, workflow automation, and backend engineering.</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-badge"><i class="fa-solid fa-bolt"></i> FastAPI</span>
+                        <span class="tech-badge"><i class="fa-solid fa-cubes"></i> Django</span>
+                        <span class="tech-badge"><i class="fa-solid fa-pepper-hot"></i> Flask</span>
+                        <span class="tech-badge"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- 4. Mobile Engineering -->
+                <div class="service-card interactive-card">
+                    <div class="icon-wrap"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>Mobile Engineering</h3>
+                    <p>Cross-platform iOS & Android mobile apps engineered for speed and responsiveness.</p>
+                    <div class="tech-badge-container">
+                        <span class="tech-badge"><i class="fa-solid fa-layer-group"></i> Flutter</span>
+                        <span class="tech-badge"><i class="fa-solid fa-terminal"></i> Dart</span>
+                        <span class="tech-badge"><i class="fa-solid fa-database"></i> Supabase</span>
+                        <span class="tech-badge"><i class="fa-brands fa-android"></i> Android API</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Virexo. All Rights Reserved.</p>
-      <p class="developer-credit">Designed & Developed by <span class="highlight-name">Mobarra Shahzad</span></p>
-    </div>
-  </footer>
+    </section>
 
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <!-- Interactive Strategy Section with Proper Arrow Head & Flow Animation -->
+    <section id="strategy" class="strategy-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Business Strategy Growth</h2>
+                <p>Navigating market fluctuations with structured planning to hit peak digital success.</p>
+            </div>
+            
+            <div class="strategy-graph-card interactive-card">
+                <div class="graph-header">
+                    <span><i class="fa-solid fa-chart-line"></i> Strategic Growth Trajectory</span>
+                    <span class="peak-badge"><i class="fa-solid fa-arrow-trend-up"></i> Peak ROI Reached</span>
+                </div>
+                
+                <div class="graph-visual-container">
+                    <svg viewBox="0 0 800 200" class="strategy-svg-graph">
+                        <defs>
+                            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#1d4ed8" />
+                                <stop offset="50%" stop-color="#c15fd6" />
+                                <stop offset="100%" stop-color="#10b981" />
+                            </linearGradient>
+                            
+                            <!-- Arrowhead Definition -->
+                            <marker id="graphArrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                                <polygon points="0 0, 8 4, 0 8" fill="#10b981" />
+                            </marker>
+                        </defs>
 
-  <script src="script.js"></script>
+                        <!-- Animated Path Ending with Arrowhead -->
+                        <path d="M 30 150 L 160 110 L 290 135 L 440 75 L 580 95 L 750 30" 
+                              fill="none" 
+                              stroke="url(#lineGrad)" 
+                              stroke-width="5" 
+                              stroke-linecap="round" 
+                              marker-end="url(#graphArrowhead)"
+                              class="animated-graph-path"/>
+                    </svg>
+
+                    <!-- Sequentially Animated Strategy Nodes -->
+                    <div class="graph-nodes">
+                        <div class="node node-1" style="left: 3.75%; top: 75%;">
+                            <span class="node-dot"></span>
+                            <div class="node-tooltip">01. Audit</div>
+                        </div>
+                        <div class="node node-2" style="left: 20%; top: 55%;">
+                            <span class="node-dot"></span>
+                            <div class="node-tooltip">02. Planning</div>
+                        </div>
+                        <div class="node node-3" style="left: 36.25%; top: 67.5%;">
+                            <span class="node-dot"></span>
+                            <div class="node-tooltip">03. Adjustment</div>
+                        </div>
+                        <div class="node node-4" style="left: 55%; top: 37.5%;">
+                            <span class="node-dot"></span>
+                            <div class="node-tooltip">04. Optimization</div>
+                        </div>
+                        <div class="node node-5" style="left: 72.5%; top: 47.5%;">
+                            <span class="node-dot"></span>
+                            <div class="node-tooltip">05. Testing</div>
+                        </div>
+                        <div class="node node-6" style="left: 93.75%; top: 15%;">
+                            <span class="node-dot peak-dot"></span>
+                            <div class="node-tooltip peak-tooltip">06. Exponential Peak</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Execution Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Execution Process</h2>
+                <p>Agile engineering methodology ensuring fast delivery.</p>
+            </div>
+            <div class="process-flow">
+                <div class="process-step interactive-card">
+                    <div class="step-num">01</div>
+                    <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h4>Discover</h4>
+                    <p>Scope & Analysis</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="process-step interactive-card">
+                    <div class="step-num">02</div>
+                    <div class="step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h4>Design</h4>
+                    <p>Architecture & UI</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="process-step interactive-card">
+                    <div class="step-num">03</div>
+                    <div class="step-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h4>Build</h4>
+                    <p>Agile Coding</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="process-step interactive-card">
+                    <div class="step-num">04</div>
+                    <div class="step-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                    <h4>Launch</h4>
+                    <p>Deploy & Scale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>Read what our international project partners say about Virexo Innovations.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card interactive-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Virexo delivered our mobile app backend seamlessly. Code quality and speed are top-tier."</p>
+                    <div class="reviewer-info">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <div>
+                            <h5>Tech Director</h5>
+                            <span>SaaS Operations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card interactive-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The UI redesign drastically improved user engagement. Highly impressed with their team!"</p>
+                    <div class="reviewer-info">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <div>
+                            <h5>Product Lead</h5>
+                            <span>Nexus Digital</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card interactive-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Flawless execution on our Machine Learning pipeline. Professional and fast delivery."</p>
+                    <div class="reviewer-info">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <div>
+                            <h5>Senior Engineer</h5>
+                            <span>DataVentures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="contact-card-box">
+                <div class="contact-header">
+                    <h2>Ready to Elevate Your Business?</h2>
+                    <p>Fill out the form below to send a direct message to our engineering team.</p>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group-row">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="serviceSelect" required>
+                            <option value="" disabled selected>Select Required Service</option>
+                            <option value="web">Web Development</option>
+                            <option value="ai">AI & Machine Learning</option>
+                            <option value="python">Python Enterprise Development</option>
+                            <option value="mobile">Mobile App Engineering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-animated-primary form-btn"><i class="fa-solid fa-paper-plane"></i> Send Direct Message</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="footer-title">Virexo Innovations</h3>
+                <p>A digital business building thoughtful websites, apps, and AI-driven tools for growing brands worldwide.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fa-solid fa-envelope"></i> virexoinnovations@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +92 302 7199916</p>
+                <p><i class="fa-solid fa-globe"></i> virexo.odoo.com</p>
+            </div>
+            <div class="footer-links">
+                <h4>Follow & Connect</h4>
+                <p><a href="https://virexo.odoo.com" target="_blank"><i class="fa-solid fa-globe"></i> Website</a></p>
+                <p><a href="#"><i class="fa-brands fa-x-twitter"></i> Follow on X</a></p>
+                <p><a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Virexo. All Rights Reserved.</p>
+            <p class="author-credit">Designed & Developed by <strong>Mobarra Shahzad</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
