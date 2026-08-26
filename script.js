@@ -1,82 +1,85 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme Switcher
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const body = document.body;
 
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
+    themeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        body.classList.toggle('dark-mode');
+
+        const icon = themeToggleBtn.querySelector('i');
+        if (body.classList.contains('light-mode')) {
+            icon.className = 'fa-solid fa-sun';
+        } else {
+            icon.className = 'fa-solid fa-moon';
+        }
     });
-  }, { threshold: 0.12 });
 
-  revealEls.forEach(el => revealObserver.observe(el));
+    // Hero Section Typing Effect
+    const textToType = "Architecting High-Performance Digital Solutions";
+    const typedTextElement = document.getElementById('typedText');
+    let charIndex = 0;
 
-  const statNums = document.querySelectorAll('.stat-num');
-  let statsAnimated = false;
-
-  function runCounter(el, target, duration = 2000) {
-    let startTimestamp = null;
-    function step(timestamp) {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(ease * target);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      } else {
-        el.textContent = target;
-      }
-    }
-    window.requestAnimationFrame(step);
-  }
-
-  const statsSection = document.getElementById('stats');
-  if (statsSection) {
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !statsAnimated) {
-          statsAnimated = true;
-          statNums.forEach(num => {
-            const target = parseInt(num.getAttribute('data-target'), 10);
-            if (!isNaN(target)) {
-              num.textContent = "0";
-              runCounter(num, target);
-            }
-          });
+    function typeEffect() {
+        if (charIndex < textToType.length) {
+            typedTextElement.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeEffect, 60);
         }
-      });
-    }, { threshold: 0.2 });
-
-    statsObserver.observe(statsSection);
-  }
-
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    if (questionBtn) {
-      questionBtn.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        faqItems.forEach(i => i.classList.remove('active'));
-        if (!isActive) {
-          item.classList.add('active');
-        }
-      });
     }
-  });
+    typeEffect();
 
-  const scrollTopBtn = document.getElementById('scrollTop');
-  if (scrollTopBtn) {
+    // Stats Counter Animation (0 to Target)
+    const counters = document.querySelectorAll('.counter-number');
+    let hasAnimated = false;
+
+    function startCounters() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const increment = target / 50;
+            let current = 0;
+
+            const updateCount = () => {
+                current += increment;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current);
+                    setTimeout(updateCount, 30);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    }
+
+    // Scroll Observer for Stats Counter
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 350) {
-        scrollTopBtn.classList.add('show');
-      } else {
-        scrollTopBtn.classList.remove('show');
-      }
+        const statsSection = document.querySelector('.stats-grid');
+        if (statsSection) {
+            const sectionPos = statsSection.getBoundingClientRect().top;
+            const screenPos = window.innerHeight;
+
+            if (sectionPos < screenPos && !hasAnimated) {
+                hasAnimated = true;
+                startCounters();
+            }
+        }
     });
 
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
+    // Contact Form Handler
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
 
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        formStatus.style.color = '#10b981';
+        formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been received successfully.';
+        
+        contactForm.reset();
+
+        setTimeout(() => {
+            formStatus.innerHTML = '';
+        }, 5000);
+    });
 });
